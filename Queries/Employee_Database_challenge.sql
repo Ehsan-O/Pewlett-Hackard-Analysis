@@ -74,24 +74,24 @@ GROUP BY cut.title
 ORDER BY count DESC;
 
 -- indicating the number of the retirement-ready employess in each department
-SELECT count(cut.emp_no), d.dept_name
+SELECT d.dept_name, count(cut.emp_no)
 INTO department_retirement
 FROM current_unique_titles as cut
 INNER JOIN dept_emp as de ON cut.emp_no = de.emp_no
 INNER JOIN departments as d ON de.dept_no = d.dept_no
 WHERE de.to_date = '9999-01-01'
 GROUP BY d.dept_name
-ORDER BY count DESC;
+ORDER BY d.dept_name;
 
 -- Retrieving the number of mentors in each department
-SELECT count(me.emp_no), d.dept_name
+SELECT d.dept_name, count(me.emp_no)
 INTO department_mentors
 FROM mentorship_eligibilty as me
 INNER JOIN dept_emp as de ON me.emp_no = de.emp_no
 INNER JOIN departments as d ON de.dept_no = d.dept_no
 WHERE de.to_date = '9999-01-01'
 GROUP BY d.dept_name
-ORDER BY count DESC;
+ORDER BY d.dept_name;
 
 
 
