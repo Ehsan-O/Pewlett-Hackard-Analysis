@@ -176,7 +176,7 @@ By joining and filtering data in these table we tried to get som information abo
 
 ## **summary**  
 
-- As we mentioned in the part 3 of the previous section the the "unique_title " table may contain the employees who are already retired because we had not filtered the data to retrieve only the current employees of the company, so, in order to determine the exact number of the roles that will need to be filled we wrote the query below to only pick the employees who are currently employed in their most recent roles:([current_unique_titles.csv](Data/current_unique_titles.csv), [current_retiring_titles.csv](Data/mentorship_eligibilty.csv))
+- As we mentioned in the part 3 of the previous section the the "unique_title " table may contain the employees who are already retired because we had not filtered the data to retrieve only the current employees of the company, so, in order to determine the exact number of the roles that will need to be filled we wrote the query below to only pick the employees who are currently employed in their most recent roles:([current_unique_titles.csv](Data/current_unique_titles.csv), [current_retiring_titles.csv](Data/current_retiring_titles.csv))
     ```sql
     SELECT DISTINCT ON (emp_no) emp_no,
 				first_name,
