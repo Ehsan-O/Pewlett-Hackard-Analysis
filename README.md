@@ -73,7 +73,7 @@ By joining and filtering data in these table we tried to get som information abo
 
 &nbsp;
 
-1. The company told us that anyone born between 1952 and 1955 will begin to retire so using the query below we joind and filter the data in "employees" and "titles" tables to get the names and titles of the employees born between 1952 and 1955 and export them to a CSV file([retirement_titles.csv](Data/retirement_titles.csv)):  
+1. The company told us that anyone born between 1952 and 1955 will begin to retire so using the query below we joined and filter the data in "employees" and "titles" tables to get the names and titles of the employees born between 1952 and 1955 and export them to a CSV file([retirement_titles.csv](Data/retirement_titles.csv)):  
 
     ```sql
     SELECT e.emp_no,
@@ -176,7 +176,7 @@ By joining and filtering data in these table we tried to get som information abo
 
 ## **summary**  
 
-- As we mentioned in the part 3 of the previous section the the "unique_title " table may contain the employees who are already retired because we had not filtered tha data to retrieve only the current employees of the company, so, in order to determine the exact number of the roles that will need to be filled we wrote the query below to only pick the employees who are currently employed in their most recent roles:([current_unique_titles.csv](Data/current_unique_titles.csv), [current_retiring_titles.csv](Data/mentorship_eligibilty.csv))
+- As we mentioned in the part 3 of the previous section the the "unique_title " table may contain the employees who are already retired because we had not filtered the data to retrieve only the current employees of the company, so, in order to determine the exact number of the roles that will need to be filled we wrote the query below to only pick the employees who are currently employed in their most recent roles:([current_unique_titles.csv](Data/current_unique_titles.csv), [current_retiring_titles.csv](Data/mentorship_eligibilty.csv))
     ```sql
     SELECT DISTINCT ON (emp_no) emp_no,
 				first_name,
@@ -203,9 +203,9 @@ By joining and filtering data in these table we tried to get som information abo
     </center>
     &nbsp;
 
-    According to Fig. 9 there will be 72,458 roles to be filled in, "Senior Engineer" and "Senior Staff" will be most required
+    According to Fig. 9 there will be 72,458 roles to be filled, "Senior Engineer" and "Senior Staff" will be most required ones
 
-- Writing the following queries we found that the company may noy have enough mentors in each department to train the big number of new employees joining those departments in the near future to replace the retired ones ([department_retirement.csv](Data/department_retirement.csv), [department_mentors.csv](Data/department_mentors.csv)):
+- Writing the following queries we found that the company may not have enough mentors in each department to train the big number of new employees joining those departments in the near future to replace the retired ones ([department_retirement.csv](Data/department_retirement.csv), [department_mentors.csv](Data/department_mentors.csv)):
     ```sql
     SELECT count(cut.emp_no), d.dept_name
     INTO department_retirement
@@ -242,4 +242,4 @@ By joining and filtering data in these table we tried to get som information abo
     </center>
     &nbsp;
 
-According to Fig. 10 and Fig. 11, each mentor will have around 50 new employees to train in each department. Which is a big number of trainees to focus on.
+According to Fig. 10 and Fig. 11, each mentor will have around 50 new employees to train in each department, which is a big number of trainees to focus on.
