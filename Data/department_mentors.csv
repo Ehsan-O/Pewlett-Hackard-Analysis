@@ -1,10 +1,10 @@
-count,dept_name
-396,Development
-322,Production
-244,Sales
-120,Customer Service
-117,Marketing
-103,Research
-97,Human Resources
-86,Quality Management
-64,Finance
+dept_name,count
+Customer Service,120
+Development,396
+Finance,64
+Human Resources,97
+Marketing,117
+Production,322
+Quality Management,86
+Research,103
+Sales,244

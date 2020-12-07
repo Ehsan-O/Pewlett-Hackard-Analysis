@@ -1,10 +1,10 @@
-count,dept_name
-18368,Development
-16172,Production
-11336,Sales
-5320,Customer Service
-4738,Research
-4448,Quality Management
-4392,Marketing
-3925,Human Resources
-3759,Finance
+dept_name,count
+Customer Service,5320
+Development,18368
+Finance,3759
+Human Resources,3925
+Marketing,4392
+Production,16172
+Quality Management,4448
+Research,4738
+Sales,11336
