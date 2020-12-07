@@ -147,12 +147,12 @@ By joining and filtering data in these table we tried to get som information abo
 
     ```sql
     SELECT DISTINCT ON (e.emp_no) e.emp_no,
-	e.first_name,
-	e.last_name,
-	e.birth_date,
-	de.from_date,
-	de.to_date,
-	ti.title
+                e.first_name,
+                e.last_name,
+                e.birth_date,
+                de.from_date,
+                de.to_date,
+                ti.title
     INTO mentorship_eligibilty
     FROM employees as e
     INNER JOIN dept_emp as de
